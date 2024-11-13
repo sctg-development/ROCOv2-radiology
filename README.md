@@ -1,6 +1,7 @@
 # ROCOv2: Radiology Object in COntext version 2
 
 ## TL;DR
+
 Ready to use ROCOv2 with Transformers in our Hugging Face repository.  
 
 ```python
@@ -72,19 +73,20 @@ The ROCOv2 dataset can be used for various applications, including:
 
 If you use the ROCOv2 dataset in your research, please cite the following paper:
 
-Pelka, O., Menze, B. H., & Rexhausen, S. E. (2023). Radiology Objects in COntext version 2 (ROCOv2): A multimodal dataset for medical image analysis. 
+Pelka, O., Menze, B. H., & Rexhausen, S. E. (2023). Radiology Objects in COntext version 2 (ROCOv2): A multimodal dataset for medical image analysis.
 arXiv preprint arXiv:2405.10004.
 
 ```latex
 @misc {ronan_l.m._2024,
-	author       = { {Ronan L.M.} },
-	title        = { ROCOv2-radiology (Revision 5d66908) },
-	year         = 2024,
-	url          = { https://huggingface.co/datasets/eltorio/ROCOv2-radiology },
-	doi          = { 10.57967/hf/3489 },
-	publisher    = { Hugging Face }
+ author       = { {Ronan L.M.} },
+ title        = { ROCOv2-radiology (Revision 5d66908) },
+ year         = 2024,
+ url          = { https://huggingface.co/datasets/eltorio/ROCOv2-radiology },
+ doi          = { 10.57967/hf/3489 },
+ publisher    = { Hugging Face }
 }
 ```
+
 ## License
 
 The ROCOv2 dataset is licensed under the CC BY-NC-SA 4.0 license.
