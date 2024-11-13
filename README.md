@@ -1,20 +1,17 @@
 # ROCOv2: Radiology Object in COntext version 2
 
-## Introduction
-
-ROCOv2 is a multimodal dataset consisting of radiological images and associated medical concepts and captions extracted from the PMC Open Access Subset. It is an updated version of the ROCO dataset, adding 35,705 new images and improving concept extraction and filtering.
-
-## Hugging Face Dataset
-
-The ROCOv2 dataset is available on the Hugging Face Datasets platform under the name `eltorio/ROCOv2-radiology`. It contains radiological images, captions, and medical concepts, making it suitable for various medical image analysis tasks.  
-
-For using the dataset in your Python code, you can load it as follows:
+## TL;DR
+Ready to use ROCOv2 with Transformers in our Hugging Face repository.  
 
 ```python
 from datasets import load_dataset
 
 ds = load_dataset("eltorio/ROCOv2-radiology")
 ```
+
+## Introduction
+
+ROCOv2 is a multimodal dataset consisting of radiological images and associated medical concepts and captions extracted from the PMC Open Access Subset. It is an updated version of the ROCO dataset, adding 35,705 new images and improving concept extraction and filtering.
 
 ## Dataset Overview
 
@@ -88,7 +85,6 @@ arXiv preprint arXiv:2405.10004.
 	publisher    = { Hugging Face }
 }
 ```
-
 ## License
 
 The ROCOv2 dataset is licensed under the CC BY-NC-SA 4.0 license.
