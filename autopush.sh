@@ -1,25 +1,32 @@
 #!/bin/bash
+# This script adds and commits all files in a git repository in batches of 500 files.
+# Usage: ./autopush.sh
+# Author: Ronan Le Meillat
+# Date: 2024_11-12
+# License: MIT
 
-# Vérifier si le dépôt git est initialisé
+# This script was created to avoid an error when trying to add and commit a large number of files in a git repository.
+
+# Check if git repository is initialized
 if [ ! -d ".git" ]; then
-  echo "Ce répertoire n'est pas un dépôt git."
-  exit 1
+    echo "This directory is not a git repository."
+    exit 1
 fi
 
-# Compteur pour les lots de fichiers
+# Counter for file batches
 batch_size=500
 counter=0
 batch_counter=1
 
-# Fonction pour ajouter et committer les fichiers
+# Function to add and commit files
 commit_batch() {
-  echo "Ajout et commit des fichiers batch $batch_counter..."
-  git commit -m "Commit batch $batch_counter"
-  git push origin main
-  batch_counter=$((batch_counter + 1))
+    echo "Adding and committing files batch $batch_counter..."
+    git commit -m "Commit batch $batch_counter"
+    git push origin main
+    batch_counter=$((batch_counter + 1))
 }
 
-# Scanner les fichiers en ignorant ceux dans .gitignore
+# Scan files while ignoring those in .gitignore
 find . -type f -not -path '*/\.*' | while read -r file; do
   git add "$file"
   counter=$((counter + 1))
@@ -30,9 +37,9 @@ find . -type f -not -path '*/\.*' | while read -r file; do
   fi
 done
 
-# Committer les fichiers restants
+# Commit remaining files
 if [ $counter -gt 0 ]; then
-  commit_batch
+    commit_batch
 fi
 
-echo "Tous les fichiers ont été ajoutés et poussés par lots de $batch_size."
+echo "All files have been added and pushed in batches of $batch_size."
